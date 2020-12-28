@@ -1,0 +1,30 @@
+<link href="../../../bower_components/polymer/polymer-element.html" rel="import">
+<!--<link rel="import" href="../../../styles/shared-styles.html">-->
+
+<dom-module id="attachment-element">
+    <template>
+        <div>
+            <a href="/api/v1/attachment/[[attachment.id]]"
+               target="_blank">[[attachment.name]]</a>
+        </div>
+    </template>
+
+    <script>
+        class AttachmentElement extends Polymer.Element {
+            static get is() {
+                return 'attachment-element';
+            }
+
+            static get properties() {
+                return {
+                    attachment: {
+                        type: Object,
+                        value: {'name': 'File 1', 'id': 2}
+                    }
+                };
+            }
+        }
+
+        customElements.define(AttachmentElement.is, AttachmentElement);
+    </script>
+</dom-module>

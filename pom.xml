@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>dimension-ui</artifactId>
+        <groupId>com.niafikra.dimension</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <groupId>com.niafikra.dimension.inventory.ui</groupId>
+    <artifactId>inventory-ui</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>inventory-ui</name>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.niafikra.dimension.core</groupId>
+            <artifactId>core-ui</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.niafikra.dimension.inventory</groupId>
+            <artifactId>inventory-lib</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+    </dependencies>
+
+</project>

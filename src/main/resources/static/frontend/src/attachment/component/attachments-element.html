@@ -1,0 +1,32 @@
+<link href="../../../bower_components/polymer/polymer-element.html" rel="import">
+<link href="../../../styles/shared-styles.html" rel="import">
+<link href="../../../attachment/component/attachment-element.html" rel="import">
+
+<dom-module id="attachments-element">
+    <template>
+        <div>
+            <div> Employee list:</div>
+            <template is="dom-repeat" items="[[attachments]]">
+                <attachment-element attachment="[[item]]"></attachment-element>
+            </template>
+        </div>
+    </template>
+
+    <script>
+        class AttachmentsElement extends Polymer.Element {
+            static get is() {
+                return 'attachments-element';
+            }
+
+            static get properties() {
+                return {
+                    attachments: {
+                        type: Array
+                    }
+                };
+            }
+        }
+
+        customElements.define(AttachmentsElement.is, AttachmentsElement);
+    </script>
+</dom-module>

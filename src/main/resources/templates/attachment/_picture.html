@@ -1,0 +1,14 @@
+<div th:fragment="picture"
+     xmlns:th="http://www.thymeleaf.org">
+    <img th:class="${classes}"
+         th:height="${height}"
+         th:if="${picture}"
+         th:src="'/api/v1/attachment/'+${picture.id}"
+         th:width="${width}"/>
+
+    <img src="http://via.placeholder.com/70x70"
+         th:class="${classes}"
+         th:height="${height}"
+         th:unless="${picture}"
+         th:width="${width}"/>
+</div>

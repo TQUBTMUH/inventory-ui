@@ -1,0 +1,14 @@
+<div th:fragment="attachments"
+     xmlns:th="http://www.thymeleaf.org">
+    <ol>
+        <th:block th:each="attachment:${attachments}">
+            <li>
+                <div th:fragment="attachment">
+                    <a target="_blank"
+                       th:href="'/api/v1/attachment/'+${attachment.id}"
+                       th:text="${attachment.name}">Attachment ABC</a>
+                </div>
+            </li>
+        </th:block>
+    </ol>
+</div>

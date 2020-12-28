@@ -1,0 +1,23 @@
+<!-- Bootstrap CSS -->
+<link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" rel="stylesheet">
+
+
+<div class="media" th:fragment="creator" xmlns:th="http://www.thymeleaf.org">
+    <img height="70px"
+         class="align-self-center mr-3 img-thumbnail  img-circle" th:if="${picture}"
+         th:src="'/api/v1/attachment/'+${picture.id}"
+         width="70px"/>
+
+    <img height="70px"
+         class="align-self-center mr-3 img-thumbnail  img-rounded" src="http://via.placeholder.com/70x70"
+         th:unless="${picture}"
+         width="70px"/>
+
+    <div class="media-body">
+        <b class="mt-0" th:text="${creator.name}">Boniface Chacha</b>
+        <th:block th:if="${time}">
+            <p class="text-muted" th:text="${#temporals.format(time, 'yyyy-MM-dd HH:mm:ss')}">12-3-2018 04:56</p>
+        </th:block>
+    </div>
+</div>
